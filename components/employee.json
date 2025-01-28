@@ -1,0 +1,144 @@
+{
+    "employee": [
+        {
+            "name": "Liraen Venshae",
+            "rate": 77,
+            "position": "Lead Software Architect",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 160000
+        },
+        {
+            "name": "Garvick Thornwyld",
+            "rate": 67,
+            "position": "Cybersecurity Specialist",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 140000
+        },
+        {
+            "name": "Serina Davlonne",
+            "rate": 45,
+            "position": "UI/UX Designer",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 95000
+        },
+        {
+            "name": "Elenor Wraithwood",
+            "rate": 106,
+            "position": "Chief Technology Officer (CTO)",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 220000
+        },
+        {
+            "name": "Jaxor Talbryn",
+            "rate": 63,
+            "position": "DevOps Engineer",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 130000
+        },
+        {
+            "name": "Kelandra Vortheon",
+            "rate": 48,
+            "position": "Front-End Developer",
+            "employment": [
+                {
+                    "full-time": false,
+                    "part-time": false,
+                    "fixed-term": true,
+                    "casual": false
+                }
+            ],
+            "salary": 100000
+        },
+        {
+            "name": "Xandros Firnwen",
+            "rate": 72,
+            "position": "Data Scientist",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 150000
+        },
+        {
+            "name": "Miraela Draven",
+            "rate": 65,
+            "position": "Blockchain Developer",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 135000
+        },
+        {
+            "name": "Thalindor Evenshade",
+            "rate": 70,
+            "position": "AI/Machine Learning Engineer",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 145000
+        },
+        {
+            "name": "Nyxia Stormrune",
+            "rate": 53,
+            "position": "Software Quality Assurance Manager",
+            "employment": [
+                {
+                    "full-time": true,
+                    "part-time": false,
+                    "fixed-term": false,
+                    "casual": false
+                }
+            ],
+            "salary": 110000
+        }
+    ]
+}

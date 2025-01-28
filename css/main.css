@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 1rem/1.5 Roboto, Arial, sans-serif;
+}
+
+table {
+    min-width: 717px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th,
+td {
+    min-width: 120px;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+tbody td:last-child {
+    text-transform: capitalize;
+}
+
+section {
+    height: 100vh;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+form fieldset {
+    width: 400px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 5%);
+}
+
+form legend {
+    text-align: center;
+    padding: 0 5px;
+}
+
+form input,
+form select {
+    display: block;
+    margin: 10px 0;
+}
+
+form select {
+    width: 100%;
+    height: 35px;
+}
+
+form input[type="search"] {
+    padding: 0 10px 0 34px;
+    height: 35px;
+    border: none;
+    outline: 1px solid #000;
+    background-image: url("../assets/img/search.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 5px center;
+}
+
+form input[type="number"] {
+    height: 25px;
+    padding: 0 5px;
+    border: none;
+    outline: 1px solid #000;
+}
+
+form div button {
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+}
+
+form div {
+    margin: 15px 0 10px 0;
+}
+
+input#max-rate:out-of-range,
+input#min-rate:out-of-range {
+    outline: 1px solid red;
+}
+
+label:has(input[id*="rate"]) {
+    position: relative;
+}
+
+label:has(input[id*="rate"]:out-of-range) span::after {
+    content: "Out of range";
+    color: red;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, 0%);
+    font-size: 0.9rem;
+}
+
+#modal {
+    width: 500px;
+    height: 250px;
+    padding: 15px;
+    position: absolute;
+    border: 1px solid #7d7d7d;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: modal 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes modal {
+    0% {
+        top: 58%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+#modal h2 {
+    margin-bottom: 15px;
+}
+
+#modal div {
+    position: absolute;
+    bottom: 10%;
+}
+
+#modal button {
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#modal::backdrop {
+    background-color: #00000054;
+}

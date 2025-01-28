@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Employee Data App</title>
+
+        <!-- Icon -->
+        <link rel="icon" href="/assets/filter.png" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Employee Filter</legend>
+                    <input
+                        type="search"
+                        name="search-employee"
+                        id="search-employee"
+                        placeholder="Search for employee"
+                        autocomplete="off"
+                    />
+                    <label
+                        >Min Rate:
+                        <input type="number" name="min-rate" id="min-rate" min="0" max="150" value="0" />
+                        <span class="out-of-range"></span>
+                    </label>
+                    <label
+                        >Max Rate:
+                        <input type="number" name="max-rate" id="max-rate" min="0" max="150" value="150" />
+                        <span class="out-of-range"></span>
+                    </label>
+                    <label
+                        >Employment Type:
+                        <select name="employment-type" id="employment-type">
+                            <option value="all">All Employment Types</option>
+                            <option value="full-time">Full-Time</option>
+                            <option value="part-time">Part-Time</option>
+                            <option value="fixed-term">Fixed-Term</option>
+                            <option value="casual">Casual</option>
+                        </select>
+                    </label>
+                    <div>
+                        <button type="reset" role="button" aria-label="Reset filter settings">Reset</button>
+                    </div>
+                </fieldset>
+            </form>
+            <table>
+                <caption>
+                    Table of Employees
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Position</th>
+                        <th>Hourly Rate ($)</th>
+                        <th>Employment Type</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-data"></tbody>
+            </table>
+        </section>
+        <script src="js/script.js"></script>
+    </body>
+</html>
