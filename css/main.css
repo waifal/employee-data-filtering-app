@@ -28,7 +28,6 @@ tbody td:last-child {
 
 section {
     height: 100vh;
-    align-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
