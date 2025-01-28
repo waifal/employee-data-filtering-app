@@ -13,3 +13,8 @@ This app is designed to load and display employee data from a JSON file. Here's 
 ## Example
 
 ![Example of Application](assets/img/example.png)
+
+## TODO
+
+-   [ ] Add `Salary` to table
+-   [ ] Add `sorting` feature (i.e., A-Z, largest to smallest, smallest to largest)
