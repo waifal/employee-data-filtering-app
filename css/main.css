@@ -11,7 +11,7 @@ html {
 table {
     min-width: 717px;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 th,
@@ -19,7 +19,7 @@ td {
     min-width: 120px;
     padding: 8px;
     text-align: left;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
 }
 
 tbody td:last-child {
@@ -65,7 +65,7 @@ form input[type="search"] {
     height: 35px;
     border: none;
     padding: 0 10px 0 34px;
-    outline: 1px solid #000;
+    outline: 1px solid #000000;
     background-image: url("../assets/img/search.png");
     background-size: 20px;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ form input[type="number"] {
     height: 25px;
     padding: 0 5px;
     border: none;
-    outline: 1px solid #000;
+    outline: 1px solid #000000;
 }
 
 form div button {
@@ -95,15 +95,15 @@ label:has(input[id*="rate"]) {
 
 input#max-rate:out-of-range,
 input#min-rate:out-of-range {
-    outline: 1px solid red;
+    outline: 1px solid #ff0000;
 }
 
 label:has(input[id*="rate"]:out-of-range) span::after {
     content: "Out of range";
-    color: red;
+    color: #ff0000;
+    font-size: 0.9rem;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(0%, 0%);
-    font-size: 0.9rem;
 }
