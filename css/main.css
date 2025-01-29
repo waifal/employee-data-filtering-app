@@ -31,8 +31,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     flex-wrap: wrap;
+    gap: 50px;
 }
 
 form fieldset {
@@ -62,13 +62,13 @@ form select {
 }
 
 form input[type="search"] {
-    padding: 0 10px 0 34px;
     height: 35px;
     border: none;
+    padding: 0 10px 0 34px;
     outline: 1px solid #000;
     background-image: url("../assets/img/search.png");
-    background-repeat: no-repeat;
     background-size: 20px;
+    background-repeat: no-repeat;
     background-position: 5px center;
 }
 
@@ -89,13 +89,13 @@ form div {
     margin: 15px 0 10px 0;
 }
 
+label:has(input[id*="rate"]) {
+    position: relative;
+}
+
 input#max-rate:out-of-range,
 input#min-rate:out-of-range {
     outline: 1px solid red;
-}
-
-label:has(input[id*="rate"]) {
-    position: relative;
 }
 
 label:has(input[id*="rate"]:out-of-range) span::after {
