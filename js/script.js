@@ -13,8 +13,13 @@ function loadEmployees(componentName, targetId = "app") {
             const maxRate = document.getElementById("max-rate");
 
             function getEmploymentTypes(data) {
-                return data.map((item) =>
-                    Object.entries(item).filter(([key, value]) => value === true).map(([key]) => key)).flat();
+                return data
+                    .map((item) =>
+                        Object.entries(item)
+                            .filter(([key, value]) => value === true)
+                            .map(([key]) => key)
+                    )
+                    .flat();
             }
 
             function loadTable(data) {
@@ -44,7 +49,9 @@ function loadEmployees(componentName, targetId = "app") {
                     const name = employee.name.toLowerCase().includes(searchValue);
                     const position = employee.position.toLowerCase().includes(searchValue);
                     const rate = employee.rate >= min && employee.rate <= max;
-                    const type = selectedEmploymentType === "all" || getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
+                    const type =
+                        selectedEmploymentType === "all" ||
+                        getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
 
                     return (name || position) && rate && type;
                 });
@@ -69,6 +76,11 @@ function loadEmployees(componentName, targetId = "app") {
                 loadTable(employeeData);
             };
         }
+    };
+
+    // prettier-ignore
+    xhr.onerror = function () {
+        document.getElementById("employee-data").innerHTML = `<tr><td colspan="4" style="color: #ff0000">Error fetching component.</td></tr>`;
     };
 
     xhr.open("GET", `../components/${componentName}.json`, true);
