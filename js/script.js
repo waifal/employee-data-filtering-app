@@ -57,8 +57,7 @@ function loadEmployees(componentName, targetId = "app") {
                 if (filteredEmployees.length > 0 || selectedEmploymentType === "all") {
                     loadTable(filteredEmployees.length > 0 ? filteredEmployees : data);
                 } else {
-                    document.getElementById("employee-data").innerHTML =
-                        "<tr><td colspan='4'>No employees match the criteria</td></tr>";
+                    document.getElementById("employee-data").innerHTML = "<tr><td colspan='4'>No employees match the criteria</td></tr>";
                 }
             }
 
