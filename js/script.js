@@ -49,9 +49,7 @@ function loadEmployees(componentName, targetId = "app") {
                     const name = employee.name.toLowerCase().includes(searchValue);
                     const position = employee.position.toLowerCase().includes(searchValue);
                     const rate = employee.rate >= min && employee.rate <= max;
-                    const type =
-                        selectedEmploymentType === "all" ||
-                        getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
+                    const type = selectedEmploymentType === "all" || getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
 
                     return (name || position) && rate && type;
                 });
