@@ -9,14 +9,14 @@ html {
 }
 
 table {
-    min-width: 717px;
+    min-width: 745px;
     border-collapse: collapse;
     background-color: #ffffff;
 }
 
 th,
 td {
-    min-width: 120px;
+    min-width: 282px;
     padding: 8px;
     text-align: left;
     border: 1px solid #cccccc;
@@ -106,4 +106,9 @@ label:has(input[id*="rate"]:out-of-range) span::after {
     top: 50%;
     right: 0;
     transform: translate(0%, 0%);
+}
+
+th button {
+    padding: 3px;
+    cursor: pointer;
 }
