@@ -12,6 +12,8 @@ function loadEmployees(componentName, targetId = "app") {
             const minRate = document.getElementById("min-rate");
             const maxRate = document.getElementById("max-rate");
 
+            let switchRates = true;
+
             function getEmploymentTypes(data) {
                 return data
                     .map((item) =>
@@ -31,6 +33,23 @@ function loadEmployees(componentName, targetId = "app") {
                             <td data-employee-name="${employee.name}">${employee.name}</td>
                             <td>${employee.position}</td>
                             <td>${employee.rate.toFixed(2)}</td>
+                            <td>${getEmploymentTypes(employee.employment)}</td>
+                        </tr>
+                    `;
+                });
+
+                document.getElementById(targetId).innerHTML = content;
+            }
+
+            function viewSalary(data) {
+                let content = "";
+
+                data.forEach((employee) => {
+                    content += `
+                        <tr>
+                            <td data-employee-name="${employee.name}">${employee.name}</td>
+                            <td>${employee.position}</td>
+                            <td>${employee.salary.toFixed(2)}</td>
                             <td>${getEmploymentTypes(employee.employment)}</td>
                         </tr>
                     `;
@@ -75,6 +94,19 @@ function loadEmployees(componentName, targetId = "app") {
             document.getElementsByTagName("button")[0].onclick = function () {
                 loadTable(employeeData);
             };
+
+            document.getElementById("switch-rates").addEventListener("click", function() {
+                if (switchRates) {
+                    viewSalary(employeeData);
+                    this.innerHTML = `<i class="fa-regular fa-clock"></i>`;
+                    this.setAttribute("title", "View Hourly Rate");
+                } else {
+                    loadTable(employeeData);
+                    this.innerHTML = `<i class="fa-regular fa-calendar-days"></i>`;
+                    this.setAttribute("title", "View Salary");
+                }
+                switchRates = !switchRates;
+            });
         }
     };
 
