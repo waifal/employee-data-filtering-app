@@ -68,9 +68,7 @@ function loadEmployees(componentName, targetId = "app") {
                     const name = employee.name.toLowerCase().includes(searchValue);
                     const position = employee.position.toLowerCase().includes(searchValue);
                     const rate = employee.rate >= min && employee.rate <= max;
-                    const type =
-                        selectedEmploymentType === "all" ||
-                        getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
+                    const type = selectedEmploymentType === "all" || getEmploymentTypes(employee.employment).includes(selectedEmploymentType);
 
                     return (name || position) && rate && type;
                 });
@@ -78,8 +76,7 @@ function loadEmployees(componentName, targetId = "app") {
                 if (filteredEmployees.length > 0 || selectedEmploymentType === "all") {
                     loadTable(filteredEmployees.length > 0 ? filteredEmployees : data);
                 } else {
-                    document.getElementById("employee-data").innerHTML =
-                        "<tr><td colspan='4'>No employees match the criteria</td></tr>";
+                    document.getElementById("employee-data").innerHTML = "<tr><td colspan='4'>No employees match the criteria</td></tr>";
                 }
             }
 
