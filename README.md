@@ -18,3 +18,4 @@ This app is designed to load and display employee data from a JSON file. Here's 
 
 -   [x] Add `Salary` to table
 -   [ ] Add `sorting` feature (i.e., A-Z, largest to smallest, smallest to largest)
+-   [ ] Fix filter when changing to salary
